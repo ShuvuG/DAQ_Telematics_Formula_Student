@@ -1,0 +1,18 @@
+%Simplified data visualisation code using MATLAB plot() function in ThingSpeak % Uses plot functions to demonstrate all Sensor_average, Sensor_minimum, Sensor_maximum and data_range on a single graph against timestamp values
+% readChannelID = 1050201;
+fieldID1 = 2; fieldID2 = 3; fieldID3 = 4; fieldID4 = 5; fieldID5 = 6; fieldID6 = 7;
+% Channel Read API Key
+readAPIKey = 'Y0ZS8JYN0XXCK90O';
+%% Read Data %%
+% Read first data variable
+[data1, time] = ThingSpeakRead(readChannelID, 'Field', fieldID1, 'NumPoints', 30, 'ReadKey', readAPIKey);
+% Read second data variable
+[data2, time] = ThingSpeakRead(readChannelID, 'Field', fieldID2, 'NumPoints', 30, 'ReadKey', readAPIKey);
+% Read third data variable
+[data3, time] = ThingSpeakRead(readChannelID, 'Field', fieldID3, 'NumPoints', 30, 'ReadKey', readAPIKey);
+% Read fourth data variable
+[data4, time] = ThingSpeakRead(readChannelID, 'Field', fieldID4, 'NumPoints', 30, 'ReadKey', readAPIKey);
+% Read fifth data variable
+[data5, time] = ThingSpeakRead(readChannelID, 'Field', fieldID5, 'NumPoints', 30, 'ReadKey', readAPIKey);
+%% Visualize Data %%
+plot(time, data2, 'r', time, data1, 'b', data3, 'g', time, data4, 'y', time, data5, 'w')
