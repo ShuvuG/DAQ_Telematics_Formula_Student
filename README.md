@@ -1,4 +1,6 @@
-#Data Acquisition System for the 2020 Brighton Racing Motors Formula Team
+#Data_Acquisition_System 
+
+DAQ and telematics system for the 2020 Brighton Racing Motors Formula Team:
 
 The data acquisition system collected data from the Solartron Metrology LVDT displacement sensor, and a HCSR04 ultrasonic sensor. The sensors were attached to the Arduino Uno microcontrollers. Arduino Uno performed simple mean-value computations and datatype truncations to smoothen any non-linear spikes observed in the data. Sensor readings were then transferred to the master controller at a user-defined sample period via a high- speed CAN 2.0b bus.
 
